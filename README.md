@@ -1,8 +1,8 @@
-# Interleaved Parity Streams: original source
+# Anonymous Parity Sketch Sessions: original source
 
-This directory is the source-publication packet for an original simulated benchmark. `generate_raw.py` defines ten anonymous 16-bit sketch streams, their public ten-round XOR code, independent channel reads, and the frozen raw archive format. `DATA_LICENSE.txt` dedicates the generator, documentation and generated data under CC0 1.0 Universal.
+This directory is the source-publication packet for the original simulated dataset Anonymous Parity Sketch Sessions, used by the Interleaved Parity Streams challenge. `generate_raw.py` defines ten anonymous 16-bit sketch streams, their public ten-round XOR code, independent channel reads, and the frozen raw archive format. `DATA_LICENSE.txt` dedicates the generator, documentation and generated data under CC0 1.0 Universal.
 
-Release 1.0.3 also includes this exact seed-free generator and `RELEASE_METADATA.json` inside the raw dataset ZIP. The metadata pins its SHA-256 and states that generation needs Python 3.10 or newer with only the standard library.
+Release 1.0.4 also includes this exact seed-free generator and `RELEASE_METADATA.json` inside the raw dataset ZIP. The metadata pins its SHA-256 and states that generation needs Python 3.10 or newer with only the standard library.
 
 No outside sample records or implementation are copied. RFC 9407 is background on coded packets and encoding vectors, not a data source or a code dependency. Each generated session has new source words, independent within-round shuffles and independent bit readings. The creator-private 128-bit master seed is intentionally absent from this public source packet so evaluation answers cannot be regenerated from it.
 

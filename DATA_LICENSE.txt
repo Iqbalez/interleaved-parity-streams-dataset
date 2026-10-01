@@ -1,4 +1,4 @@
-Interleaved Parity Streams generator, generated sessions, and documentation:
+Anonymous Parity Sketch Sessions generator, generated sessions, and documentation:
 CC0 1.0 Universal public domain dedication.
 https://creativecommons.org/publicdomain/zero/1.0/
 

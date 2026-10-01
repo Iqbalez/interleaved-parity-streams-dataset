@@ -23,6 +23,7 @@ WORD_BITS = 16
 READ_ERROR = 0.04
 CODEBOOK = (44, 47, 49, 54, 56, 50, 39, 41, 43, 38)
 SOURCE_URL = "https://github.com/Iqbalez/interleaved-parity-streams-dataset"
+DATASET_TITLE = "Anonymous Parity Sketch Sessions"
 RAW_COLUMNS = ("raw_case_id", "packets", "stream_labels", "source_words")
 
 
@@ -129,7 +130,7 @@ def generate(seed_hex: str, output: Path) -> dict[str, object]:
     code_bytes = (json.dumps({"vectors": CODEBOOK, "source_word_count": N_SOURCE_WORDS,
                              "sketch_bits": WORD_BITS}, indent=2) + "\n").encode("utf-8")
     provenance = {
-        "title": "Interleaved Parity Streams",
+        "title": DATASET_TITLE,
         "origin": "Original creator-generated synthetic transmission sessions",
         "source_repository_status": "Dedicated public original-generator repository",
         "source_url": SOURCE_URL,
@@ -144,7 +145,7 @@ def generate(seed_hex: str, output: Path) -> dict[str, object]:
         "seed_disclosed": False,
     }
     license_text = (
-        "Interleaved Parity Streams generator, generated sessions and documentation: "
+        "Anonymous Parity Sketch Sessions generator, generated sessions and documentation: "
         "CC0 1.0 Universal public domain dedication, "
         "https://creativecommons.org/publicdomain/zero/1.0/. "
         "No external records, code or licensed artwork are redistributed.\n"
@@ -161,7 +162,7 @@ def generate(seed_hex: str, output: Path) -> dict[str, object]:
     )
     generator_bytes = Path(__file__).read_bytes()
     release_metadata = {
-        "release_version": "1.0.3",
+        "release_version": "1.0.4",
         "generator_file": "generate_raw.py",
         "generator_sha256": hashlib.sha256(generator_bytes).hexdigest(),
         "generator_dependencies": "Python standard library only",
